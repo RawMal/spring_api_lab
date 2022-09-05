@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TaskController {
 
     @GetMapping
-    public Greeting newGreeting(@RequestParam(value = "name") String name){
-        return new Greeting("Good "+"Afternoon", name);
+    public Greeting newGreeting(@RequestParam String timeOfDay, @RequestParam String name){
+        return new Greeting("Good "+timeOfDay, name);
     }
+
 
 
 
