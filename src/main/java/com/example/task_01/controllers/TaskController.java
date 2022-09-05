@@ -1,5 +1,6 @@
 package com.example.task_01.controllers;
 
+import com.example.task_01.models.Celebration;
 import com.example.task_01.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,10 @@ public class TaskController {
         return new Greeting("Good "+timeOfDay, name);
     }
 
+    @GetMapping(value = "/eid")
+    public Celebration celebratoryGreet(){
+        return new Celebration("Eid Mubarak!");
+    }
 
 
 
